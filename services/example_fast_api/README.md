@@ -1,6 +1,20 @@
 # Example Fast API
 
-Example FastAPI API service 
+Example FastAPI API service
+
+## App layer structure
+
+### Domain
+
+Domain layer consists of domain models, use cases and business logic.
+
+### Infra
+
+Infra layer consists of repositories which return domain models.
+
+### Service
+
+Service layer provides an interface to interact with the Infra and Domain layers. Want to avoid having too much "business logic" in the Service layer.
 
 ## Notable API Endpoints
 
