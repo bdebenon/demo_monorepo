@@ -1,21 +1,5 @@
 # Example Monorepo
 
-## Sample app structure
-
-### Domain
-
-Domain layers consist of domain models and use cases.
-
-### Infra
-
-Infra layers consist of Repositories which return domain models.
-
-### Service
-
-Service layers shouldn't have "business logic" in them. They can carry out a number of steps required to fulfill an
-application need.
-
-
 ## Bazel
 Demo Monorepo uses Bazel to manage dependencies and build artifacts. 
 
