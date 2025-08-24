@@ -1,0 +1,9 @@
+pydantic==2.10.6
+fastapi==0.115.11
+dependency-injector==4.46.0
+uvicorn==0.34.0
+
+pytest
+pytest-only
+pytest-asyncio
+httpx
