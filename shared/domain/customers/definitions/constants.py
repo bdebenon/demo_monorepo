@@ -1,0 +1,3 @@
+TEST_CUSTOMER_NAME = 'test_customer'
+TEST_CUSTOMER_2_NAME = 'test_customer_2'
+TEST_CUSTOMER_2_UUID = '94717a1a-51cb-44a5-a22d-94c8712500c3'

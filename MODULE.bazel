@@ -1,0 +1,25 @@
+module(
+    name = "demo_monorepo",
+    version = "1.0.0",
+)
+
+bazel_dep(name = "rules_python", version = "1.3.0", repo_name = "rules_python")
+
+###### Shared pip packages #####
+pip_shared = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+pip_shared.parse(
+    hub_name = "pip_shared",
+    python_version = "3.11",
+    requirements_lock = "//shared:requirements_lock.txt",
+)
+use_repo(pip_shared, "pip_shared")
+
+##### Example Fast API #####
+pip_example_fast_api = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+pip_example_fast_api.parse(
+    hub_name = "pip_example_fast_api",
+    python_version = "3.11",
+    requirements_lock = "//services/example_fast_api:requirements_lock.txt",
+)
+use_repo(pip_example_fast_api, "pip_example_fast_api")
+
